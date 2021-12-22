@@ -29,10 +29,10 @@
  * \author    Daniel Jaeckle ( STACKFORCE )
  */
 #include <math.h>
-#include "radio.h"
-#include "utilities.h"
+#include "../../../../libsx1262/include/radio.h"
+#include "../../boards/utilities.h"
 #include "RegionCommon.h"
-#include "systime.h"
+#include "../../system/systime.h"
 
 #define BACKOFF_DC_1_HOUR                   100
 #define BACKOFF_DC_10_HOURS                 1000

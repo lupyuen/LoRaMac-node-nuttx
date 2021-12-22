@@ -28,7 +28,7 @@
  *
  * \author    Daniel Jaeckle ( STACKFORCE )
 */
-#include "radio.h"
+#include "../../../../libsx1262/include/radio.h"
 #include "RegionCommon.h"
 #include "RegionUS915.h"
 #include "RegionBaseUS.h"

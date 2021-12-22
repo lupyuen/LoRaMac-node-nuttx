@@ -34,7 +34,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "secure-element.h"
 
 #include "LoRaMacParser.h"

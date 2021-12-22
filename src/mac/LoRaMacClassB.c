@@ -18,7 +18,7 @@ License: Revised BSD License, see LICENSE.TXT file include in the project
 Maintainer: Miguel Luis ( Semtech ), Gregory Cristian ( Semtech ) and Daniel Jaeckle ( STACKFORCE )
 */
 #include <math.h>
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "secure-element.h"
 #include "LoRaMac.h"
 #include "LoRaMacClassB.h"
@@ -26,7 +26,7 @@ Maintainer: Miguel Luis ( Semtech ), Gregory Cristian ( Semtech ) and Daniel Jae
 #include "LoRaMacClassBConfig.h"
 #include "LoRaMacCrypto.h"
 #include "LoRaMacConfirmQueue.h"
-#include "radio.h"
+#include "../../../libsx1262/include/radio.h"
 #include "region/Region.h"
 
 #ifdef LORAMAC_CLASSB_ENABLED

@@ -31,7 +31,7 @@
  * \author    Phanindra Kumar Yellapu ( STACKFORCE )
  */
 #include "LoRaMacTypes.h"
-#include "region/Region.h"
+#include "Region.h"
 #include "RegionBaseUS.h"
 
 

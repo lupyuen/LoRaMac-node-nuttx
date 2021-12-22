@@ -21,8 +21,8 @@ Maintainer: Miguel Luis ( Semtech ), Gregory Cristian ( Semtech ) and Daniel Jae
 #include <stdbool.h>
 #include <stddef.h>
 
-#include "timer.h"
-#include "utilities.h"
+#include "../system/timer.h"
+#include "../boards/utilities.h"
 #include "LoRaMac.h"
 #include "LoRaMacConfirmQueue.h"
 

@@ -38,7 +38,7 @@ extern "C"
 {
 #endif
 
-#include "region/Region.h"
+#include "Region.h"
 
 /*!
  * The maximum number of channels.
