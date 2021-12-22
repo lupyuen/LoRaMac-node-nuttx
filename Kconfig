@@ -3,25 +3,18 @@
 # see the file kconfig-language.txt in the NuttX tools repository.
 #
 
-menuconfig LIBSX1262
-	bool "Semtech SX1262 Library"
+menuconfig LIBLORAWAN
+	bool "LoRaWAN Library"
 	default n
 	---help---
-		Enable build for Semtech SX1262 functions
+		Enable build for LoRaWAN Library
 
-if LIBSX1262
+if LIBLORAWAN
 
-config LIBSX1262_DEBUG
-	bool "Libsx1262 debugging"
+config LIBLORAWAN_DEBUG
+	bool "LoRaWAN debugging"
 	default n
 	---help---
-		Enable debugging for libsx1262
+		Enable debugging for LoRaWAN Library
 
-config LIBSX1262_PRECISION
-	int "Libsx1262 precision [0/1/2]"
-	default 0
-
-config LIBSX1262_FOC_VABC
-	bool "Libsx1262 FOC includes voltage abc frame"
-
-endif # LIBSX1262
+endif # LIBLORAWAN

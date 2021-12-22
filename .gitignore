@@ -26,3 +26,7 @@ tmp/
 .vscode/launch.json
 .cmaketools.json
 ipch/
+*.a
+*.o
+.depend
+Make*.dep

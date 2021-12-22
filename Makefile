@@ -1,5 +1,5 @@
 ############################################################################
-# libs/libsx1262/Makefile
+# libs/liblorawan/Makefile
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -20,11 +20,8 @@
 
 include $(TOPDIR)/Make.defs
 
-ifeq ($(CONFIG_LIBSX1262),y)
-CSRCS += src/radio.c
-CSRCS += src/sx126x.c
-CSRCS += src/sx126x-nuttx.c
-CSRCS += lib_misc.c
+ifeq ($(CONFIG_LIBLORAWAN),y)
+CSRCS += src/mac/LoRaMac.c
 endif
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))
@@ -33,7 +30,7 @@ COBJS = $(CSRCS:.c=$(OBJEXT))
 SRCS = $(ASRCS) $(CSRCS)
 OBJS = $(AOBJS) $(COBJS)
 
-BIN ?= libsx1262$(LIBEXT)
+BIN ?= liblorawan$(LIBEXT)
 
 all: $(BIN)
 .PHONY:  depend clean distclean
