@@ -21,8 +21,36 @@
 include $(TOPDIR)/Make.defs
 
 ifeq ($(CONFIG_LIBLORAWAN),y)
+
+#---------------------------------------------------------------------------------------
+# Application common features handling
+#---------------------------------------------------------------------------------------
+#### TODO: CSRCS += src/apps/LoRaMac/common/cli.c
+CSRCS += src/apps/LoRaMac/common/LmHandlerMsgDisplay.c
+CSRCS += src/apps/LoRaMac/common/NvmDataMgmt.c
+
+#---------------------------------------------------------------------------------------
+# Application LoRaMac handler
+#---------------------------------------------------------------------------------------
 CSRCS += src/apps/LoRaMac/common/LmHandler/LmHandler.c
+
+#---------------------------------------------------------------------------------------
+# LoRaMac handler applicative packages
+#---------------------------------------------------------------------------------------
+CSRCS += src/apps/LoRaMac/common/LmHandler/packages/FragDecoder.c
+CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpClockSync.c
+CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpCompliance.c
+CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpFragmentation.c
+CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpRemoteMcastSetup.c
+
+#---------------------------------------------------------------------------------------
+# Boards
+#---------------------------------------------------------------------------------------
 CSRCS += src/boards/mcu/utilities.c
+
+#---------------------------------------------------------------------------------------
+# LoRaMac
+#---------------------------------------------------------------------------------------
 CSRCS += src/mac/region/RegionAS923.c
 #### TODO: CSRCS += src/mac/region/RegionCN779.c
 #### TODO: CSRCS += src/mac/region/RegionEU433.c
@@ -41,7 +69,8 @@ CSRCS += src/mac/LoRaMacConfirmQueue.c
 CSRCS += src/mac/LoRaMacCrypto.c
 CSRCS += src/mac/LoRaMacParser.c
 CSRCS += src/mac/LoRaMacSerializer.c
-endif
+
+endif # CONFIG_LIBLORAWAN
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))
 COBJS = $(CSRCS:.c=$(OBJEXT))

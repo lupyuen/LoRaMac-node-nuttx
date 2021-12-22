@@ -33,8 +33,8 @@
 
 #include <stdio.h>
 #include "../../../boards/utilities.h"
-#include "nvmm.h"
-#include "LoRaMac.h"
+#include "../../../system/nvmm.h"
+#include "../../../mac/LoRaMac.h"
 #include "NvmDataMgmt.h"
 
 /*!

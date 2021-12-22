@@ -21,9 +21,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "board.h"
-#include "NvmDataMgmt.h"
-#include "LoRaMacTest.h"
+#include "../../../../../boards/board.h"
+#include "../../NvmDataMgmt.h"
+#include "../../../../../mac/LoRaMacTest.h"
 #include "../LmHandler.h"
 #include "LmhpCompliance.h"
 
