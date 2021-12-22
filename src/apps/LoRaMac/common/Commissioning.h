@@ -38,7 +38,7 @@ extern "C" {
  ******************************************************************************
  ******************************************************************************
  */
-#include "se-identity.h"
+#include "../../../peripherals/soft-se/se-identity.h"
 
 /*!
  * When set to 1 the application uses the Over-the-Air activation procedure

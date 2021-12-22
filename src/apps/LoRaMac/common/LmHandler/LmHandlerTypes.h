@@ -25,7 +25,7 @@
 extern "C" {
 #endif
 
-#include "LoRaMac.h"
+#include "../../../../mac/LoRaMac.h"
 
 /*!
  * If set to 1 the new API defining \ref OnSysTimeUpdate callback is used.

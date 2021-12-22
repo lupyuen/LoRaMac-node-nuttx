@@ -25,17 +25,17 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "utilities.h"
-#include "timer.h"
-#include "Commissioning.h"
-#include "NvmDataMgmt.h"
-#include "radio.h"
+#include "../../../../boards/utilities.h"
+#include "../../../../system/timer.h"
+#include "../Commissioning.h"
+#include "../NvmDataMgmt.h"
+#include "../../../../../../libsx1262/include/radio.h"
 #include "LmHandler.h"
-#include "LmhPackage.h"
-#include "LmhpCompliance.h"
-#include "LmhpClockSync.h"
-#include "LmhpRemoteMcastSetup.h"
-#include "LmhpFragmentation.h"
+#include "packages/LmhPackage.h"
+#include "packages/LmhpCompliance.h"
+#include "packages/LmhpClockSync.h"
+#include "packages/LmhpRemoteMcastSetup.h"
+#include "packages/LmhpFragmentation.h"
 
 #ifndef ACTIVE_REGION
 
@@ -45,7 +45,7 @@
 
 #endif
 
-#include "LoRaMacTest.h"
+#include "../../../../mac/LoRaMacTest.h"
 
 static CommissioningParams_t CommissioningParams =
 {

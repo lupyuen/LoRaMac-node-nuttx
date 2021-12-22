@@ -27,7 +27,7 @@ extern "C" {
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "LmHandlerTypes.h"
+#include "../LmHandlerTypes.h"
 
 /*!
  * Maximum number of packages

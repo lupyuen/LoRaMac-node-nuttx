@@ -26,8 +26,8 @@
 extern "C" {
 #endif
 
-#include "LoRaMac.h"
-#include "LmHandlerTypes.h"
+#include "../../../../../mac/LoRaMac.h"
+#include "../LmHandlerTypes.h"
 #include "LmhPackage.h"
 
 /*!
