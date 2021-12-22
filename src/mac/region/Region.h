@@ -59,9 +59,9 @@ extern "C"
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "utilities.h"
-#include "LoRaMac.h"
-#include "timer.h"
+#include "../../boards/utilities.h"
+#include "../LoRaMac.h"
+#include "../../system/timer.h"
 #include "RegionCommon.h"
 
 /*!

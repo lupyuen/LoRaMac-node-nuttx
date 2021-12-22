@@ -39,7 +39,7 @@ extern "C"
 #endif
 
 #include <stdint.h>
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "LoRaMacTypes.h"
 
 

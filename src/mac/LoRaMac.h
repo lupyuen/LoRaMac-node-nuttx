@@ -74,11 +74,11 @@ extern "C"
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "timer.h"
-#include "systime.h"
+#include "../system/timer.h"
+#include "../system/systime.h"
 #include "LoRaMacTypes.h"
 
-#include "RegionNvm.h"
+#include "region/RegionNvm.h"
 #include "LoRaMacCryptoNvm.h"
 #include "secure-element-nvm.h"
 #include "LoRaMacClassBNvm.h"

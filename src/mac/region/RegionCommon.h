@@ -42,9 +42,9 @@ extern "C"
 {
 #endif
 
-#include "LoRaMacTypes.h"
-#include "LoRaMacHeaderTypes.h"
-#include "region/Region.h"
+#include "../LoRaMacTypes.h"
+#include "../LoRaMacHeaderTypes.h"
+#include "../region/Region.h"
 
 // Constants that are common to all the regions.
 

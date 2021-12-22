@@ -42,8 +42,8 @@ extern "C"
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "timer.h"
-#include "systime.h"
+#include "../system/timer.h"
+#include "../system/systime.h"
 
 /*!
  * Start value for unicast keys enumeration

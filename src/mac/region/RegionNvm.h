@@ -38,7 +38,7 @@ extern "C"
 {
 #endif
 
-#include "LoRaMacTypes.h"
+#include "../LoRaMacTypes.h"
 
 /*!
  * Channel plan for region CN470

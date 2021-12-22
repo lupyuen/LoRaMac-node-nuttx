@@ -30,7 +30,7 @@
  *
  * \author    Johannes Bruder ( STACKFORCE )
  */
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "region/Region.h"
 #include "LoRaMacClassB.h"
 #include "LoRaMacCrypto.h"
@@ -44,7 +44,7 @@
 #include "LoRaMacCommands.h"
 #include "LoRaMacAdr.h"
 #include "LoRaMacSerializer.h"
-#include "radio.h"
+#include "../../../libsx1262/include/radio.h"
 
 #include "LoRaMac.h"
 
