@@ -29,6 +29,7 @@
  * \author    Daniel Jaeckle ( STACKFORCE )
  */
 #include "../LoRaMac.h"
+#define REGION_AS923  ////  TODO
 
 // Setup regions
 #ifdef REGION_AS923

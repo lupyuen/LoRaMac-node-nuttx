@@ -21,6 +21,8 @@
 include $(TOPDIR)/Make.defs
 
 ifeq ($(CONFIG_LIBLORAWAN),y)
+CSRCS += src/apps/LoRaMac/common/LmHandler/LmHandler.c
+CSRCS += src/boards/mcu/utilities.c
 CSRCS += src/mac/region/RegionAS923.c
 #### TODO: CSRCS += src/mac/region/RegionCN779.c
 #### TODO: CSRCS += src/mac/region/RegionEU433.c
@@ -39,7 +41,6 @@ CSRCS += src/mac/LoRaMacConfirmQueue.c
 CSRCS += src/mac/LoRaMacCrypto.c
 CSRCS += src/mac/LoRaMacParser.c
 CSRCS += src/mac/LoRaMacSerializer.c
-CSRCS += src/apps/LoRaMac/common/LmHandler/LmHandler.c
 endif
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))
