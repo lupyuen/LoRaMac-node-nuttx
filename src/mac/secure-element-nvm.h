@@ -34,6 +34,8 @@
 #ifndef __SECURE_ELEMENT_NVM_H__
 #define __SECURE_ELEMENT_NVM_H__
 
+#define SOFT_SE ////  TODO
+
 #ifdef __cplusplus
 extern "C"
 {
