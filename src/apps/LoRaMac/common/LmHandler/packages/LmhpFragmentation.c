@@ -19,7 +19,7 @@
  *
  * \author    Miguel Luis ( Semtech )
  */
-#include "LmHandler.h"
+#include "../LmHandler.h"
 #include "LmhpFragmentation.h"
 #include "FragDecoder.h"
 

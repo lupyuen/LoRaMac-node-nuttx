@@ -23,7 +23,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "utilities.h"
+#include "../../../boards/utilities.h"
 #include "timer.h"
 
 #include "LmHandlerMsgDisplay.h"

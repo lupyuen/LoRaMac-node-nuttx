@@ -24,7 +24,7 @@
 #include "board.h"
 #include "NvmDataMgmt.h"
 #include "LoRaMacTest.h"
-#include "LmHandler.h"
+#include "../LmHandler.h"
 #include "LmhpCompliance.h"
 
 /*!

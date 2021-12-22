@@ -32,7 +32,7 @@
  */
 
 #include <stdio.h>
-#include "utilities.h"
+#include "../../../boards/utilities.h"
 #include "nvmm.h"
 #include "LoRaMac.h"
 #include "NvmDataMgmt.h"

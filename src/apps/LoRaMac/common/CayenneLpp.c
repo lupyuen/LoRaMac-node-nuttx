@@ -20,7 +20,7 @@
  */
 #include <stdint.h>
 
-#include "utilities.h"
+#include "../../../boards/utilities.h"
 #include "CayenneLpp.h"
 
 #define CAYENNE_LPP_MAXBUFFER_SIZE                  242

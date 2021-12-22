@@ -26,8 +26,8 @@
 extern "C" {
 #endif
 
-#include "utilities.h"
-#include "LmHandler.h"
+#include "../../../boards/utilities.h"
+#include "LmHandler/LmHandler.h"
 
 /*!
  * \brief Displays NVM context operation state
