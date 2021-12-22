@@ -1,4 +1,4 @@
-# LoRaWAN end-device stack implementation and example projects
+# LoRaWAN end-device stack implementation for Apache NuttX OS
 
       ______                              _
      / _____)             _              | |
