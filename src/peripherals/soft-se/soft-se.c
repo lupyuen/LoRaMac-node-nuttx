@@ -26,14 +26,14 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include "utilities.h"
+#include "../../boards/utilities.h"
 #include "aes.h"
 #include "cmac.h"
 
-#include "LoRaMacHeaderTypes.h"
+#include "../../mac/LoRaMacHeaderTypes.h"
 
-#include "secure-element.h"
-#include "secure-element-nvm.h"
+#include "../../mac/secure-element.h"
+#include "../../mac/secure-element-nvm.h"
 #include "se-identity.h"
 #include "soft-se-hal.h"
 

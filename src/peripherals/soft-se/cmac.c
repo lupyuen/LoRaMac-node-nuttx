@@ -35,7 +35,7 @@ DEALINGS WITH THE SOFTWARE
 #include <stdint.h>
 #include "aes.h"
 #include "cmac.h"
-#include "utilities.h"
+#include "../../boards/utilities.h"
 
 #define LSHIFT( v, r )                                    \
     do                                                    \

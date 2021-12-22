@@ -27,6 +27,7 @@ tmp/
 .cmaketools.json
 ipch/
 *.a
+*.ddc
 *.o
 .depend
 Make*.dep

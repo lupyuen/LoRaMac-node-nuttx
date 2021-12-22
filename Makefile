@@ -49,7 +49,7 @@ CSRCS += src/apps/LoRaMac/common/LmHandler/packages/LmhpRemoteMcastSetup.c
 CSRCS += src/boards/mcu/utilities.c
 
 #---------------------------------------------------------------------------------------
-# LoRaMac
+# LoRaMac Regions
 #---------------------------------------------------------------------------------------
 CSRCS += src/mac/region/RegionAS923.c
 #### TODO: CSRCS += src/mac/region/RegionCN779.c
@@ -61,6 +61,10 @@ CSRCS += src/mac/region/RegionAS923.c
 #### TODO: CSRCS += src/mac/region/RegionBaseUS.c
 CSRCS += src/mac/region/RegionCommon.c
 CSRCS += src/mac/region/Region.c
+
+#---------------------------------------------------------------------------------------
+# LoRaMac
+#---------------------------------------------------------------------------------------
 CSRCS += src/mac/LoRaMac.c
 CSRCS += src/mac/LoRaMacAdr.c
 CSRCS += src/mac/LoRaMacClassB.c
@@ -69,6 +73,14 @@ CSRCS += src/mac/LoRaMacConfirmQueue.c
 CSRCS += src/mac/LoRaMacCrypto.c
 CSRCS += src/mac/LoRaMacParser.c
 CSRCS += src/mac/LoRaMacSerializer.c
+
+#---------------------------------------------------------------------------------------
+# Peripherals
+#---------------------------------------------------------------------------------------
+CSRCS += src/peripherals/soft-se/aes.c
+CSRCS += src/peripherals/soft-se/cmac.c
+CSRCS += src/peripherals/soft-se/soft-se-hal.c
+CSRCS += src/peripherals/soft-se/soft-se.c
 
 endif # CONFIG_LIBLORAWAN
 
