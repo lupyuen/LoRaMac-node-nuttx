@@ -191,7 +191,7 @@ static TimerEvent_t FragmentTxDelayTimer;
 /*!
  * \brief Callback function for Fragment delay timer.
  */
-static void OnFragmentTxDelay( void* context )
+static void OnFragmentTxDelay( struct ble_npl_event *event )
 {
     // Stop the timer.
     TimerStop( &FragmentTxDelayTimer );

@@ -348,43 +348,43 @@ static void OnRadioRxTimeout( void );
 /*!
  * \brief Function executed on duty cycle delayed Tx  timer event
  */
-static void OnTxDelayedTimerEvent( void* context );
+static void OnTxDelayedTimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on first Rx window timer event
  */
-static void OnRxWindow1TimerEvent( void* context );
+static void OnRxWindow1TimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on second Rx window timer event
  */
-static void OnRxWindow2TimerEvent( void* context );
+static void OnRxWindow2TimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on Rejoin Type 0 cycle timer event
  */
-static void OnRejoin0CycleTimerEvent( void* context );
+static void OnRejoin0CycleTimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on Rejoin Type 0 cycle timer event
  */
-static void OnRejoin1CycleTimerEvent( void* context );
+static void OnRejoin1CycleTimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on Rejoin Type 0 cycle timer event
  */
-static void OnRejoin2CycleTimerEvent( void* context );
+static void OnRejoin2CycleTimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on Rejoin Type 0 or 2 cycle timer event
  *        which was requested by a ForceRejoinReq MAC command.
  */
-static void OnForceRejoinReqCycleTimerEvent( void* context );
+static void OnForceRejoinReqCycleTimerEvent( struct ble_npl_event *event );
 
 /*!
  * \brief Function executed on AckTimeout timer event
  */
-static void OnRetransmitTimeoutTimerEvent( void* context );
+static void OnRetransmitTimeoutTimerEvent( struct ble_npl_event *event );
 
 /*!
  * Computes next 32 bit downlink counter value and determines the frame counter ID.
@@ -1827,7 +1827,7 @@ void LoRaMacProcess( void )
     }
 }
 
-static void OnTxDelayedTimerEvent( void* context )
+static void OnTxDelayedTimerEvent( struct ble_npl_event *event )
 {
     TimerStop( &MacCtx.TxDelayedTimer );
     MacCtx.MacState &= ~LORAMAC_TX_DELAYED;
@@ -1860,7 +1860,7 @@ static void OnTxDelayedTimerEvent( void* context )
     }
 }
 
-static void OnRxWindow1TimerEvent( void* context )
+static void OnRxWindow1TimerEvent( struct ble_npl_event *event )
 {
     MacCtx.RxWindow1Config.Channel = MacCtx.Channel;
     MacCtx.RxWindow1Config.DrOffset = Nvm.MacGroup2.MacParams.Rx1DrOffset;
@@ -1872,7 +1872,7 @@ static void OnRxWindow1TimerEvent( void* context )
     RxWindowSetup( &MacCtx.RxWindowTimer1, &MacCtx.RxWindow1Config );
 }
 
-static void OnRxWindow2TimerEvent( void* context )
+static void OnRxWindow2TimerEvent( struct ble_npl_event *event )
 {
     // Check if we are processing Rx1 window.
     // If yes, we don't setup the Rx2 window.
@@ -1890,7 +1890,7 @@ static void OnRxWindow2TimerEvent( void* context )
     RxWindowSetup( &MacCtx.RxWindowTimer2, &MacCtx.RxWindow2Config );
 }
 
-static void OnRetransmitTimeoutTimerEvent( void* context )
+static void OnRetransmitTimeoutTimerEvent( struct ble_npl_event *event )
 {
     TimerStop( &MacCtx.RetransmitTimeoutTimer );
 
@@ -5323,7 +5323,7 @@ static bool ConvertRejoinCycleTime( uint32_t rejoinCycleTime, uint32_t* timeInMi
     }
 }
 
-static void OnRejoin0CycleTimerEvent( void* context )
+static void OnRejoin0CycleTimerEvent( struct ble_npl_event *event )
 {
     TimerStop( &MacCtx.Rejoin0CycleTimer );
     ConvertRejoinCycleTime( Nvm.MacGroup2.Rejoin0CycleInSec, &MacCtx.Rejoin0CycleTime );
@@ -5334,7 +5334,7 @@ static void OnRejoin0CycleTimerEvent( void* context )
     TimerStart( &MacCtx.Rejoin0CycleTimer );
 }
 
-static void OnRejoin1CycleTimerEvent( void* context )
+static void OnRejoin1CycleTimerEvent( struct ble_npl_event *event )
 {
     TimerStop( &MacCtx.Rejoin1CycleTimer );
     ConvertRejoinCycleTime( Nvm.MacGroup2.Rejoin1CycleInSec, &MacCtx.Rejoin1CycleTime );
@@ -5345,7 +5345,7 @@ static void OnRejoin1CycleTimerEvent( void* context )
     TimerStart( &MacCtx.Rejoin1CycleTimer );
 }
 
-static void OnRejoin2CycleTimerEvent( void* context )
+static void OnRejoin2CycleTimerEvent( struct ble_npl_event *event )
 {
     TimerStop( &MacCtx.Rejoin2CycleTimer );
     ConvertRejoinCycleTime( Nvm.MacGroup2.Rejoin2CycleInSec, &MacCtx.Rejoin2CycleTime );
@@ -5356,7 +5356,7 @@ static void OnRejoin2CycleTimerEvent( void* context )
     TimerStart( &MacCtx.Rejoin2CycleTimer );
 }
 
-static void OnForceRejoinReqCycleTimerEvent( void* context )
+static void OnForceRejoinReqCycleTimerEvent( struct ble_npl_event *event )
 {
     if( Nvm.MacGroup1.ForceRejoinRetriesCounter == Nvm.MacGroup2.ForceRejoinMaxRetries )
     {
