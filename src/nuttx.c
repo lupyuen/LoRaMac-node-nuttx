@@ -12,7 +12,10 @@
 /*!
  * \brief Initializes the mcu.
  */
-void BoardInitMcu( void );
+void BoardInitMcu( void ) {
+    puts( "TODO: BoardInitMcu" );
+    assert(false);
+}
 
 /*!
  * \brief Resets the mcu.
