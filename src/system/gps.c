@@ -25,7 +25,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "board.h"
 #include "rtc-board.h"
 #include "gps-board.h"

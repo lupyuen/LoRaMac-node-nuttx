@@ -25,8 +25,8 @@
 
 #include <stdint.h>
 
-#include "utilities.h"
-#include "eeprom-board.h"
+#include "../boards/utilities.h"
+#include "../boards/eeprom-board.h"
 #include "nvmm.h"
 
 uint16_t NvmmWrite( uint8_t* src, uint16_t size, uint16_t offset )

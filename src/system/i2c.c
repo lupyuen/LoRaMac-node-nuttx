@@ -21,7 +21,7 @@
  * \author    Gregory Cristian ( Semtech )
  */
 #include <stdbool.h>
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "i2c-board.h"
 
 /*!

@@ -30,7 +30,7 @@ extern "C"
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "utilities.h"
+#include "../boards/utilities.h"
 
 /* Structure to handle the GPS parsed data in ASCII */
 typedef struct

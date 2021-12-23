@@ -82,6 +82,11 @@ CSRCS += src/peripherals/soft-se/cmac.c
 CSRCS += src/peripherals/soft-se/soft-se-hal.c
 CSRCS += src/peripherals/soft-se/soft-se.c
 
+#---------------------------------------------------------------------------------------
+# System
+#---------------------------------------------------------------------------------------
+CSRCS += src/system/nvmm.c
+
 endif # CONFIG_LIBLORAWAN
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))

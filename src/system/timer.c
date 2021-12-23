@@ -20,7 +20,7 @@
  *
  * \author    Gregory Cristian ( Semtech )
  */
-#include "utilities.h"
+#include "../boards/utilities.h"
 #include "board.h"
 #include "rtc-board.h"
 #include "timer.h"
