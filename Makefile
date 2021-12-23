@@ -88,6 +88,11 @@ CSRCS += src/peripherals/soft-se/soft-se.c
 CSRCS += src/system/nvmm.c
 CSRCS += src/system/systime.c
 
+#---------------------------------------------------------------------------------------
+# NuttX
+#---------------------------------------------------------------------------------------
+CSRCS += src/nuttx.c
+
 endif # CONFIG_LIBLORAWAN
 
 AOBJS = $(ASRCS:.S=$(OBJEXT))
