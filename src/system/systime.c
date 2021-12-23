@@ -23,7 +23,7 @@
  * \author    MCD Application Team ( STMicroelectronics International )
  */
 #include <stdio.h>
-#include "rtc-board.h"
+#include "../boards/rtc-board.h"
 #include "systime.h"
 
 #define END_OF_FEBRUARY_LEAP                         60 //31+29

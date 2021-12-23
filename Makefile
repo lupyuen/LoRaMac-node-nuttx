@@ -86,6 +86,7 @@ CSRCS += src/peripherals/soft-se/soft-se.c
 # System
 #---------------------------------------------------------------------------------------
 CSRCS += src/system/nvmm.c
+CSRCS += src/system/systime.c
 
 endif # CONFIG_LIBLORAWAN
 
