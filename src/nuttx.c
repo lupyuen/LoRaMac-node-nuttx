@@ -44,6 +44,7 @@ void BoardGetUniqueId( uint8_t *id ) {
  */
 void BoardLowPowerHandler( void ) {
     puts("TODO: BoardLowPowerHandler");
+    sleep(10);
 }
 
 /*!
