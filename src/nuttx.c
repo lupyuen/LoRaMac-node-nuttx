@@ -14,7 +14,6 @@
  */
 void BoardInitMcu( void ) {
     puts("TODO: BoardInitMcu");
-    assert(false);
 }
 
 /*!
@@ -22,7 +21,6 @@ void BoardInitMcu( void ) {
  */
 void BoardResetMcu( void ) {
     puts("TODO: BoardResetMcu");
-    assert(false);
 }
 
 /*!
@@ -30,7 +28,6 @@ void BoardResetMcu( void ) {
  */
 void BoardInitPeriph( void ) {
     puts("TODO: BoardInitPeriph");
-    assert(false);
 }
 
 /*!
@@ -40,7 +37,6 @@ void BoardInitPeriph( void ) {
  */
 void BoardGetUniqueId( uint8_t *id ) {
     puts("TODO: BoardGetUniqueId");
-    assert(false);
 }
 
 /*!
@@ -48,7 +44,6 @@ void BoardGetUniqueId( uint8_t *id ) {
  */
 void BoardLowPowerHandler( void ) {
     puts("TODO: BoardLowPowerHandler");
-    assert(false);
 }
 
 /*!
@@ -58,7 +53,6 @@ void BoardLowPowerHandler( void ) {
  */
 void BoardCriticalSectionBegin( uint32_t *mask ) {
     puts("TODO: BoardCriticalSectionBegin");
-    assert(false);
 }
 
 /*!
@@ -68,7 +62,6 @@ void BoardCriticalSectionBegin( uint32_t *mask ) {
  */
 void BoardCriticalSectionEnd( uint32_t *mask ) {
     puts("TODO: BoardCriticalSectionEnd");
-    assert(false);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -86,7 +79,7 @@ void BoardCriticalSectionEnd( uint32_t *mask ) {
  */
 LmnStatus_t EepromMcuWriteBuffer( uint16_t addr, uint8_t *buffer, uint16_t size ) {
     puts("TODO: EepromMcuWriteBuffer");
-    assert(false);
+    return LMN_STATUS_ERROR;
 }
 
 /*!
@@ -99,7 +92,7 @@ LmnStatus_t EepromMcuWriteBuffer( uint16_t addr, uint8_t *buffer, uint16_t size 
  */
 LmnStatus_t EepromMcuReadBuffer( uint16_t addr, uint8_t *buffer, uint16_t size ) {
     puts("TODO: EepromMcuReadBuffer");
-    assert(false);
+    return LMN_STATUS_ERROR;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -115,7 +108,6 @@ LmnStatus_t EepromMcuReadBuffer( uint16_t addr, uint8_t *buffer, uint16_t size )
  */
 uint32_t RtcGetCalendarTime( uint16_t *milliseconds ) {
     puts("TODO: RtcGetCalendarTime");
-    assert(false);
     return 0;
 }
 
@@ -127,7 +119,6 @@ uint32_t RtcGetCalendarTime( uint16_t *milliseconds ) {
  */
 void RtcBkupWrite( uint32_t data0, uint32_t data1 ) {
     puts("TODO: RtcBkupWrite");
-    assert(false);
 }
 
 /*!
@@ -138,5 +129,4 @@ void RtcBkupWrite( uint32_t data0, uint32_t data1 ) {
  */
 void RtcBkupRead( uint32_t* data0, uint32_t* data1 ) {
     puts("TODO: RtcBkupRead");
-    assert(false);
 }
