@@ -13,34 +13,63 @@
  * \brief Initializes the mcu.
  */
 void BoardInitMcu( void ) {
-    puts( "TODO: BoardInitMcu" );
+    puts("TODO: BoardInitMcu");
     assert(false);
 }
 
 /*!
  * \brief Resets the mcu.
  */
-void BoardResetMcu( void );
+void BoardResetMcu( void ) {
+    puts("TODO: BoardResetMcu");
+    assert(false);
+}
 
 /*!
  * \brief Initializes the boards peripherals.
  */
-void BoardInitPeriph( void );
+void BoardInitPeriph( void ) {
+    puts("TODO: BoardInitPeriph");
+    assert(false);
+}
 
 /*!
  * \brief Gets the board 64 bits unique ID
  *
  * \param [IN] id Pointer to an array that will contain the Unique ID
  */
-void BoardGetUniqueId( uint8_t *id );
+void BoardGetUniqueId( uint8_t *id ) {
+    puts("TODO: BoardGetUniqueId");
+    assert(false);
+}
 
 /*!
  * \brief Manages the entry into ARM cortex deep-sleep mode
  */
-void BoardLowPowerHandler( void );
+void BoardLowPowerHandler( void ) {
+    puts("TODO: BoardLowPowerHandler");
+    assert(false);
+}
 
-//  BoardCriticalSectionBegin
-//  BoardCriticalSectionEnd
+/*!
+ * Disable interrupts, begins critical section
+ *
+ * \param [IN] mask Pointer to a variable where to store the CPU IRQ mask
+ */
+void BoardCriticalSectionBegin( uint32_t *mask ) {
+    puts("TODO: BoardCriticalSectionBegin");
+    assert(false);
+}
+
+/*!
+ * Ends critical section
+ *
+ * \param [IN] mask Pointer to a variable where the CPU IRQ mask was stored
+ */
+void BoardCriticalSectionEnd( uint32_t *mask ) {
+    puts("TODO: BoardCriticalSectionEnd");
+    assert(false);
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //  EEPROM
