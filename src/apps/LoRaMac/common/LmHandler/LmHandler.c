@@ -354,7 +354,11 @@ void LmHandlerProcess( void )
     // Process Radio IRQ
     if( Radio.IrqProcess != NULL )
     {
-        Radio.IrqProcess( );
+        //  TODO: This won't work because we haven't implemented GPIO Interrupts
+        //  Radio.IrqProcess( );
+
+        //  TODO: For now we force the driver to check for received messsages
+        RadioOnDioIrq(NULL);  //  TODO: Remove this when GPIO Interrupts are implemented
     }
 
     // Processes the LoRaMac events
