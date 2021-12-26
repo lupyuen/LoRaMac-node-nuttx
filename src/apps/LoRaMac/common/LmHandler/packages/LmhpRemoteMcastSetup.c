@@ -122,9 +122,9 @@ static void LmhpRemoteMcastSetupProcess( void );
  */
 static void LmhpRemoteMcastSetupOnMcpsIndication( McpsIndication_t *mcpsIndication );
 
-static void OnSessionStartTimer( void *context );
+static void OnSessionStartTimer( struct ble_npl_event *event );
 
-static void OnSessionStopTimer( void *context );
+static void OnSessionStopTimer( struct ble_npl_event *event );
 
 static LmhpRemoteMcastSetupState_t LmhpRemoteMcastSetupState =
 {
@@ -499,14 +499,14 @@ static void LmhpRemoteMcastSetupOnMcpsIndication( McpsIndication_t *mcpsIndicati
     }
 }
 
-static void OnSessionStartTimer( void *context )
+static void OnSessionStartTimer( struct ble_npl_event *event )
 {
     TimerStop( &SessionStartTimer );
 
     LmhpRemoteMcastSetupState.SessionState = REMOTE_MCAST_SETUP_SESSION_STATE_START;
 }
 
-static void OnSessionStopTimer( void *context )
+static void OnSessionStopTimer( struct ble_npl_event *event )
 {
     TimerStop( &SessionStopTimer );
 
