@@ -486,7 +486,7 @@ LmHandlerErrorStatus_t LmHandlerSend( LmHandlerAppData_t *appData, LmHandlerMsgT
     if( LoRaMacQueryTxPossible( appData->BufferSize, &txInfo ) != LORAMAC_STATUS_OK )
     {
         // Send empty frame in order to flush MAC commands
-        puts("LmHandlerSend: Empty frame"); ////
+        printf("LmHandlerSend: Empty frame, LoRaMacQueryTxPossible=%d\n", LoRaMacQueryTxPossible( appData->BufferSize, &txInfo )); ////
         mcpsReq.Type = MCPS_UNCONFIRMED;
         mcpsReq.Req.Unconfirmed.fBuffer = NULL;
         mcpsReq.Req.Unconfirmed.fBufferSize = 0;
