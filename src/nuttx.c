@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <fcntl.h>
 
 ///////////////////////////////////////////////////////////////////////////////
 //  Board
@@ -139,7 +140,15 @@ void RtcBkupRead( uint32_t* data0, uint32_t* data1 ) {
 
 /// Get random devnonce from the Random Number Generator
 SecureElementStatus_t SecureElementRandomNumber( uint32_t* randomNum ) {
-    #error TODO
+    //  Open the Random Number Generator /dev/urandom
+    int fd = open("/dev/urandom", O_RDONLY);
+    assert(fd > 0);
+
+    //  Read the random number
+    read(fd, randomNum, sizeof(uint32_t));
+    close(fd);
+
+    printf("SecureElementRandomNumber: 0x%08x\n", *randomNum);
     return SECURE_ELEMENT_SUCCESS;
 }
 
