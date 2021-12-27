@@ -209,6 +209,10 @@ SecureElementStatus_t SecureElementSetPin( uint8_t* pin );
  */
 uint8_t* SecureElementGetPin( void );
 
+#ifdef __NuttX__  //  For NuttX: Get random devnonce from the Random Number Generator
+SecureElementStatus_t SecureElementRandomNumber( uint32_t* randomNum );
+#endif  //  __NuttX__
+
 /*! \} defgroup SECUREELEMENT */
 
 #ifdef __cplusplus

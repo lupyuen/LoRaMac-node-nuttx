@@ -1,5 +1,5 @@
 //  LoRaWAN Platform-Specific Functions for NuttX
-
+#ifdef __NuttX__  //  This file is for NuttX only
 #include <assert.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -131,3 +131,16 @@ void RtcBkupWrite( uint32_t data0, uint32_t data1 ) {
 void RtcBkupRead( uint32_t* data0, uint32_t* data1 ) {
     puts("TODO: RtcBkupRead");
 }
+
+///////////////////////////////////////////////////////////////////////////////
+//  Secure Element
+
+#include "mac/secure-element.h"
+
+/// Get random devnonce from the Random Number Generator
+SecureElementStatus_t SecureElementRandomNumber( uint32_t* randomNum ) {
+    #error TODO
+    return SECURE_ELEMENT_SUCCESS;
+}
+
+#endif  //  __NuttX__

@@ -58,7 +58,11 @@ extern "C"
 /*!
  * Indicates if a random devnonce must be used or not
  */
+#ifdef __NuttX__  //  For NuttX: Get random devnonce from the Random Number Generator
+#define USE_RANDOM_DEV_NONCE                        1
+#else
 #define USE_RANDOM_DEV_NONCE                        0
+#endif  //  __NuttX__
 
 /*!
  * Indicates if JoinNonce is counter based and requires to be checked on 1.0.x devices
