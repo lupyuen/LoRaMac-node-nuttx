@@ -45,7 +45,6 @@ void BoardGetUniqueId( uint8_t *id ) {
  */
 void BoardLowPowerHandler( void ) {
     puts("TODO: BoardLowPowerHandler");
-    sleep(10);
 }
 
 /*!
@@ -54,7 +53,7 @@ void BoardLowPowerHandler( void ) {
  * \param [IN] mask Pointer to a variable where to store the CPU IRQ mask
  */
 void BoardCriticalSectionBegin( uint32_t *mask ) {
-    puts("TODO: BoardCriticalSectionBegin");
+    //  puts("TODO: BoardCriticalSectionBegin");
 }
 
 /*!
@@ -63,7 +62,7 @@ void BoardCriticalSectionBegin( uint32_t *mask ) {
  * \param [IN] mask Pointer to a variable where the CPU IRQ mask was stored
  */
 void BoardCriticalSectionEnd( uint32_t *mask ) {
-    puts("TODO: BoardCriticalSectionEnd");
+    //  puts("TODO: BoardCriticalSectionEnd");
 }
 
 ///////////////////////////////////////////////////////////////////////////////
