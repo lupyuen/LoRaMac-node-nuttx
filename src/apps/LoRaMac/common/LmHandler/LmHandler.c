@@ -25,6 +25,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include "../../../../boards/utilities.h"
 #include "../../../../system/timer.h"
 #include "../Commissioning.h"
@@ -485,12 +486,14 @@ LmHandlerErrorStatus_t LmHandlerSend( LmHandlerAppData_t *appData, LmHandlerMsgT
     if( LoRaMacQueryTxPossible( appData->BufferSize, &txInfo ) != LORAMAC_STATUS_OK )
     {
         // Send empty frame in order to flush MAC commands
+        puts("LmHandlerSend: Empty frame"); ////
         mcpsReq.Type = MCPS_UNCONFIRMED;
         mcpsReq.Req.Unconfirmed.fBuffer = NULL;
         mcpsReq.Req.Unconfirmed.fBufferSize = 0;
     }
     else
     {
+        puts("LmHandlerSend: Data frame"); ////
         mcpsReq.Req.Unconfirmed.fPort = appData->Port;
         mcpsReq.Req.Unconfirmed.fBufferSize = appData->BufferSize;
         mcpsReq.Req.Unconfirmed.fBuffer = appData->Buffer;
