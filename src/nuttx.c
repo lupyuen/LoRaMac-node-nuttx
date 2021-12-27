@@ -148,7 +148,7 @@ SecureElementStatus_t SecureElementRandomNumber( uint32_t* randomNum ) {
     read(fd, randomNum, sizeof(uint32_t));
     close(fd);
 
-    printf("SecureElementRandomNumber: 0x%08x\n", *randomNum);
+    printf("SecureElementRandomNumber: 0x%08lx\n", *randomNum);
     return SECURE_ELEMENT_SUCCESS;
 }
 
