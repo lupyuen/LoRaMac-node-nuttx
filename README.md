@@ -45,7 +45,7 @@ make menuconfig
 
 In menuconfig, enable the LoRaWAN Library under "Libraries".
 
-This repo is a fork of Semtech's [Lora-net/LoRaMac-node](https://github.com/Lora-net/LoRaMac-node)...
+This repo is a fork of Semtech's [Lora-net/LoRaMac-node](https://github.com/Lora-net/LoRaMac-node) with minimal changes...
 
       ______                              _
      / _____)             _              | |
