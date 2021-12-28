@@ -4,13 +4,11 @@ Read the articles...
 
 -   ["LoRa SX1262 on Apache NuttX OS"](https://lupyuen.github.io/articles/sx1262)
 
+-   ["SPI on Apache NuttX OS"](https://lupyuen.github.io/articles/spi2)
+
 This repo depends on...
 
 -   [lupyuen/lora-sx1262 (lorawan branch)](https://github.com/lupyuen/lora-sx1262/tree/lorawan)
-
--   [lupyuen/nimble-porting-nuttx](https://github.com/lupyuen/nimble-porting-nuttx)
-
--   [spi_test_driver](https://github.com/lupyuen/incubator-nuttx/blob/master/drivers/rf/spi_test_driver.c)
 
 To add this repo to your NuttX project...
 
