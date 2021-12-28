@@ -1,4 +1,4 @@
-# LoRaWAN end-device stack implementation for Apache NuttX OS
+# LoRaWAN Stack for Apache NuttX OS
 
 Read the articles...
 
@@ -44,6 +44,8 @@ make menuconfig
 ```
 
 In menuconfig, enable the LoRaWAN Library under "Libraries".
+
+This repo is a fork of Semtech's [Lora-net/LoRaMac-node](https://github.com/Lora-net/LoRaMac-node)...
 
       ______                              _
      / _____)             _              | |
