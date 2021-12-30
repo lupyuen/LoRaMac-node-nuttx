@@ -26,7 +26,7 @@ Maintainer: Miguel Luis ( Semtech ), Gregory Cristian ( Semtech ) and Daniel Jae
 #include "LoRaMacClassBConfig.h"
 #include "LoRaMacCrypto.h"
 #include "LoRaMacConfirmQueue.h"
-#include "../../../libsx1262/include/radio.h"
+#include "../libs/libsx1262/include/radio.h"
 #include "region/Region.h"
 
 #ifdef LORAMAC_CLASSB_ENABLED

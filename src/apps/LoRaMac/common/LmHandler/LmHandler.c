@@ -30,7 +30,7 @@
 #include "../../../../system/timer.h"
 #include "../Commissioning.h"
 #include "../NvmDataMgmt.h"
-#include "../../../../../../libsx1262/include/radio.h"
+#include "../libs/libsx1262/include/radio.h"
 #include "LmHandler.h"
 #include "packages/LmhPackage.h"
 #include "packages/LmhpCompliance.h"

@@ -29,7 +29,7 @@
  * \author    Daniel Jaeckle ( STACKFORCE )
  */
 #include <math.h>
-#include "../../../../libsx1262/include/radio.h"
+#include "../libs/libsx1262/include/radio.h"
 #include "../../boards/utilities.h"
 #include "RegionCommon.h"
 #include "../../system/systime.h"

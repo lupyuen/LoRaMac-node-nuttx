@@ -26,7 +26,7 @@
 #ifdef __NuttX__
 
 //  For NuttX: Use Timer Functions from NimBLE Porting Layer
-#include "../../../libsx1262/include/sx126x-board.h"
+#include "../libs/libsx1262/include/sx126x-board.h"
 typedef struct ble_npl_callout TimerEvent_t;
 typedef uint32_t TimerTime_t;
 #define TIMERTIME_T_MAX                             ( ( uint32_t )~0 )
