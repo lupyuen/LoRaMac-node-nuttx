@@ -23,7 +23,9 @@ Next update the Makefiles and Kconfig...
 
 -   ["Update Makefiles and Kconfig"](https://lupyuen.github.io/articles/sx1262#update-makefiles-and-kconfig)
 
-(Change "__sx1262__" to "__lorawan__", preserve case)
+    Change "__sx1262__" to "__lorawan__", preserve case
+
+-   [See the modified Makefiles and Kconfig](https://github.com/lupyuen/incubator-nuttx/commit/2d25a682211307f5a675e73293b0eac7de80528c?diff=unified)
 
 Then update the NuttX Build Config...
 
