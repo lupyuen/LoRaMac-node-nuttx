@@ -12,6 +12,12 @@ This repo depends on...
 
 -   [lupyuen/lora-sx1262 (lorawan branch)](https://github.com/lupyuen/lora-sx1262/tree/lorawan)
 
+To test the LoRaWAN Stack, run this NuttX App...
+
+-   [lupyuen/lorawan_test](https://github.com/lupyuen/lorawan_test)
+
+# Install Library
+
 To add this repo to your NuttX project...
 
 ```bash
