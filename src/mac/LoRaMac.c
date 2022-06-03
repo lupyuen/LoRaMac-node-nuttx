@@ -829,7 +829,7 @@ static void UpdateRxSlotIdleState( void )
 
 static void ProcessRadioTxDone( void )
 {
-    printf("ProcessRadioTxDone: RxWindow1Delay=%d\n", MacCtx.RxWindow1Delay);////TODO
+    printf("ProcessRadioTxDone: RxWindow1Delay=%ld\n", MacCtx.RxWindow1Delay);////TODO
     GetPhyParams_t getPhy;
     PhyParam_t phyParam;
     SetBandTxDoneParams_t txDone;
