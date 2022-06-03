@@ -30,6 +30,12 @@
  *
  * \author    Johannes Bruder ( STACKFORCE )
  */
+#if defined(__NuttX__) && defined(__clang__)  //  Workaround for NuttX with zig cc
+#include <arch/types.h>
+#include "../../nuttx/include/limits.h"
+#endif  //  defined(__NuttX__) && defined(__clang__)
+
+#include <stdio.h>
 #include "../boards/utilities.h"
 #include "region/Region.h"
 #include "LoRaMacClassB.h"
@@ -3614,6 +3620,11 @@ static uint8_t IsRequestPending( void )
 
 LoRaMacStatus_t LoRaMacInitialization( LoRaMacPrimitives_t* primitives, LoRaMacCallback_t* callbacks, LoRaMacRegion_t region )
 {
+#ifdef __clang__
+    puts("LoRaMacInitialization: Compiled with zig cc");
+#else
+    puts("LoRaMacInitialization: Compiled with gcc");
+#endif  //  __clang__
     GetPhyParams_t getPhy;
     PhyParam_t phyParam;
 
